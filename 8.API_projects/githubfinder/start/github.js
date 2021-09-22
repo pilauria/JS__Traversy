@@ -1,7 +1,7 @@
 class GitHub {
   constructor() {
-    this.client_id = '-------------------';
-    this.client_secret = '-------------------------------';
+    this.client_id = 'CLIENTID';
+    this.client_secret = 'APIKEY'; // Replace 'CLIENTID' and 'APIKEY' with your own API key; otherwise, your HTTP request will not work;
     this.repos_count = 5;
     this.repos_sort = 'created: asc';
   }
