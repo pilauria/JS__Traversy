@@ -1,6 +1,6 @@
 /* MODULE PATTERN:
 PURPOSES: 
--- create self contained code that avoid collisions (namespace). 
+-- create self contained code that avoid collisions of variables (namespace). 
 Variables created inside a function are accessible only within that function(this is what 
 it means by private),  but once you execute an IIFE and return a value and store it in a global variable, it would be accessible anywhere(this is what it means by public)
 -- Reusability
@@ -21,26 +21,26 @@ it means by private),  but once you execute an IIFE and return a value and store
 ////////////////////////////////////////////
 // // STANDARD MODULE PATTERN
 
-// const UICtrl = (function () {
-//   let text = 'Hello Word';
+const UICtrl = (function () {
+  let text = 'Hello Word';
 
-//   const changeText = function () {
-//     const element = document.querySelector('h1');
-//     element.textContent = text;
-//   };
+  const changeText = function () {
+    const element = document.querySelector('h1');
+    element.textContent = text;
+  };
 
-//   return {
-//     callChangeText: function () {
-//       changeText();
-//       console.log(text);
-//     },
-//   };
-// })();
+  return {
+    callChangeText: function () {
+      changeText();
+      console.log(text);
+    },
+  };
+})();
 
-// UICtrl.callChangeText();
-// UICtrl.changeText(); can't access this variable from outside the module
+UICtrl.callChangeText();
+UICtrl.changeText(); can't access this variable from outside the module
 
-// console.log(UICtrl.text); // undefined, same reason
+console.log(UICtrl.text); // undefined, same reason
 
 ////////////////////////////////////////////
 // REVEALING MODULE PATTERN
@@ -71,8 +71,8 @@ it means by private),  but once you execute an IIFE and return a value and store
 ////////////////////////////////////////////
 // NORMAL FUNCTION
 function communication() {
-  let greet = 'Hello',
-    goodbye = 'So long ';
+  let greet = 'Hello';
+  let goodbye = 'So long ';
 
   const getGreet = function () {
     let d = new Date();
