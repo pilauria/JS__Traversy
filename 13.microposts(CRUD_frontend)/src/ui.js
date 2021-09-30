@@ -12,7 +12,7 @@ class UI {
   showPosts(posts) {
     let output = '';
 
-    posts.forEach((post) => {
+    posts.forEach(post => {
       output += `
         <div class="card mb-3">
           <div class="card-body">
@@ -53,14 +53,14 @@ class UI {
     // Timeout
     setTimeout(() => {
       this.clearAlert();
-    }, 3000);
+    }, 2000);
   }
 
   // Clear alert message
   clearAlert() {
     const currentAlert = document.querySelector('.alert');
 
-    if(currentAlert) {
+    if (currentAlert) {
       currentAlert.remove();
     }
   }
@@ -87,15 +87,16 @@ class UI {
 
   // Change the form state
   changeFormState(type) {
-    if(type === 'edit') {
+    if (type === 'edit') {
       this.postSubmit.textContent = 'Update Post';
       this.postSubmit.className = 'post-submit btn btn-warning btn-block';
 
       // Create cancel button
+      /*(or could just add the button in the HTML and hide it with success and then just show it here)*/
       const button = document.createElement('button');
       button.className = 'post-cancel btn btn-light btn-block';
       button.appendChild(document.createTextNode('Cancel Edit'));
-
+      // intserting the button to the DOM
       // Get parent
       const cardForm = document.querySelector('.card-form');
       // Get element to insert before
@@ -106,7 +107,7 @@ class UI {
       this.postSubmit.textContent = 'Post It';
       this.postSubmit.className = 'post-submit btn btn-primary btn-block';
       // Remove cancel btn if it is there
-      if(document.querySelector('.post-cancel')) {
+      if (document.querySelector('.post-cancel')) {
         document.querySelector('.post-cancel').remove();
       }
       // Clear ID from hidden field
