@@ -10,7 +10,7 @@ loadEventListeners();
 
 // Load all event listener
 function loadEventListeners() {
-  // DOM load event
+  // DOM load event (from local storage)
   document.addEventListener('DOMContentLoaded', getTasks);
   // Add task event
   form.addEventListener('submit', addTask);
@@ -128,7 +128,7 @@ function clearTasks() {
 function filterTasks(e) {
   const text = e.target.value.toLowerCase();
 
-  document.querySelectorAll('.collection-item').forEach(function (task) {
+  document.querySelectorAll('.collection-item').forEach(task => {
     const item = task.firstChild.textContent;
     if (item.toLowerCase().indexOf(text) != -1) {
       task.style.display = 'block';
