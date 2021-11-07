@@ -18,9 +18,8 @@ It's going to block until the posts are fetched and loaded, which obviously slow
 
 ![Alt text](./images/Async.jpg)
 In this case, instead of just pulling the post out of a synchronous function, we're passing in a callback function, which is just one method for handling asynchronous code.<br/>
-This callback will run and fetch the post and allow us to do something with the post, but they do.
-The next thing function does not have to wait until the posts are fetched and loaded.
-So the program isn't blocked and it will simply just keep going.Even if it takes a while for the post to be fetched.
+This callback will run and fetch the post and allow us to do something with the post, but `doTheNextThing()` function does not have to wait until the posts are fetched and loaded.
+So the program isn't blocked and it will simply just keep going. Even if it takes a while for the post to be fetched.
 It's not going to stop the do the next thing function from running.<br/>
 In turn, this is much faster.
 And that's the beauty of asynchronous JavaScript in asynchronous programming in general.</font>
@@ -45,7 +44,7 @@ Ajax isn't a language or framework or a library.
 It's a set of web technologies to send and receive data from the client and server.
 And it does this asynchronously.
 So it's done behind the scenes without having to explicitly reload the Web page.
-Most of the APIs that you're going to work with return Jason data, not XML or in some cases they'll return both.<br/>
+Most of the APIs that you're going to work with return JSON data, not XML or in some cases they'll return both.<br/>
 Now, when we send and receive requests that can be from something<br/> - on our local machine <br/> - or on our local
 server, <br/> - or it can be something from a public API, something like Google Maps or the GitHub API. <br/>
 There's a lot of different whether APIs.<br/>

@@ -5,11 +5,11 @@ Before we get into the dom in the next section, I just want to take a few minute
 Because the document object is actually part of the window object, as with many other things.
 The Window is the global object in client side JavaScript.
 And Node.js it's a JavaScript runtime that runs as a standalone process on your machine, in your computer.
-So your system, your computer system is your environment in Node.js?
+So your system, your computer system is your environment in Node.js.
 Whereas, in client side JavaScript, the window or the browser is the global environment.
-And what's cool is no JS and Chrome both use the same JavaScript engine called VATE and it works the same way. It's just in different environments.
+And what's cool is nodeJS and Chrome both use the same JavaScript engine called VATE and it works the same way. It's just in different environments.
 The window object has a lot to it.
-things that JavaScript developers use all the time, like local storage, the new Fetch API, the navigator object, which includes geolocation, and then it even includes methods like alert and prompt and confirm.
+Things that JavaScript developers use all the time, like local storage, the new Fetch API, the navigator object, which includes geolocation, and then it even includes methods like alert and prompt and confirm.
 So I want to take a look at some of these properties and methods.
 
 In the console of the browser we can look up the global object Window by just typing window, to see all the property it has
